@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tugas_google_classroom/components/identity_watermark.dart';
 import 'package:tugas_google_classroom/components/mytextfield.dart';
 import 'package:tugas_google_classroom/controllers/kalkulator_controller.dart';
 import 'package:tugas_google_classroom/routes/routes.dart';
@@ -13,6 +14,7 @@ class KalkulatorPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text("My Kalkulator")),
+      bottomNavigationBar: const IdentityWatermark(),
       body: Container(
         margin: EdgeInsets.all(5),
         child: Column(

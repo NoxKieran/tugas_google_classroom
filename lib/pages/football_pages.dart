@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tugas_google_classroom/components/identity_watermark.dart';
 import 'package:tugas_google_classroom/controllers/football_ctr.dart';
 
 class FootballPages extends StatelessWidget {
@@ -11,6 +12,7 @@ class FootballPages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("List Players")), //AppBar
+      bottomNavigationBar: const IdentityWatermark(),
       body: Obx(() {
         return ListView.builder(
           itemCount: controller.players.length,
