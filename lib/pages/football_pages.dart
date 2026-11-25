@@ -12,7 +12,7 @@ class FootballPages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("List Players")), //AppBar
-      bottomNavigationBar: const IdentityWatermark(),
+      bottomNavigationBar: const IdentityWatermark(), 
       body: Obx(() {
         return ListView.builder(
           itemCount: controller.players.length,
