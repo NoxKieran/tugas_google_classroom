@@ -1,5 +1,7 @@
 import 'package:tugas_google_classroom/components/mytextfield.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tugas_google_classroom/routes/routes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -25,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // LOGO SEKOLAH
+                  // ASSEST LOGO
                   Image.asset(
                     'assets/images/logo.png',
                     width: 150,
@@ -64,9 +66,8 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       if (txtUsername.text == "admin" &&
                           txtPassword.text == "admin123") {
-                        setState(() {
-                          statuslogin = "sukses login";
-                        });
+                          // Jika login berhasil, akan masuk ke page kalkulator
+                        Get.offNamed(Routes.kalkulator);
                       } else {
                         setState(() {
                           statuslogin = "gagal login";
@@ -86,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.only(bottom: 15),
             child: const Column(
               children: [
+                // INDENTITAS PEMBUAT
                 Text(
                   "Nama       : Muhammad Iqbal Maulana",
                   style: TextStyle(fontSize: 14),

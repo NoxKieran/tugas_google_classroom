@@ -86,6 +86,12 @@ class KalkulatorPage extends StatelessWidget {
               },
               child: Text("Go to Main Menu"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.offAllNamed(Routes.login);
+              },
+              child: Text("Quit"),
+            ),
           ],
         ),
       ),

@@ -12,7 +12,6 @@ class Pages {
     GetPage(
       name: Routes.login,
       page: ()=> LoginPage(),
-
     ),
     GetPage(
       name: Routes.kalkulator,
